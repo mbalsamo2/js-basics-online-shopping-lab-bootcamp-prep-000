@@ -48,8 +48,8 @@ function viewCart() {
       cartItems.push(phrase);
     }
    
-   var oxfordComma = cartItems.pop();
-   console.log(`${statement}${cartItems.join(', ')}, and ${oxfordComma}.` );
+   var lastComma = cartItems.pop();
+   console.log(`${statement}${cartItems.join(', ')}, and ${lastComma}.` );
     
   }
 }

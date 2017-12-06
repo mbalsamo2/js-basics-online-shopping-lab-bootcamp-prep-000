@@ -39,7 +39,7 @@ function viewCart() {
     
     console.log(`${statement}${itemOne} at $${itemOnePrice} and ${itemTwo} at $${itemTwoPrice}.`);
   } else {
-    cartItems = [];
+    var cartItems = [];
     
     for (var i in cart ) {
       var item = Object.keys(cart[i]);

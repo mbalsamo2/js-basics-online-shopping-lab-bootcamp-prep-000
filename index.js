@@ -4,6 +4,11 @@ function getCart() {
  return cart;
 }
 
+function setCart(c) {
+  cart = c;
+  return cart;
+}
+
 function addToCart(item) {
   var itemPrice = Math.floor(Math.random() * 100 + 1);
 
@@ -71,10 +76,6 @@ function removeFromCart(item) {
     }
   }
   
-  function setCart(c) {
-  cart = c;
-  return cart;
-}
   
    if (!found) {
      console.log("That item is not in your cart");

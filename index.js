@@ -10,11 +10,48 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
+  var itemPrice = Math.floor(Math.random() * 100 + 1);
+
+  cart.push({ [item]: itemPrice});
+
+  console.log(`${item} has been added to your cart.`);
+
+  return cart;
 }
 
 function viewCart() {
-  // write your code here
+  var statement = "In your cart, you have ";
+  var numberItemsInCart = cart.length;
+  
+  if (cart.length === 0) {
+    console.log("Your shopping cart is empty.");
+    
+  } else if (cart.length === 1) {
+    var itemInCart = Object.keys(cart[0]);
+    
+    console.log(`${statement}${itemInCart} at $${cart[0][itemInCart]}.`); 
+    
+  } else if (cart.length === 2) {
+    var itemOne = Object.keys(cart[0]);
+    var itemOnePrice = Object.keys(cart[0][itemOne]);
+    var itemTwo = Object.keys(cart[1]);
+    var itemTwoPrice = Object.keys(cart[1][itemTwo]);
+    
+    console.log(`${statement}${itemOne} at $${itemOnePrice} and ${itemTwo} at $${itemTwoPrice}.`);
+  } else {
+    cartItems = [];
+    
+    for (var i in cart ) {
+      var item = Object.keys(cart[i]);
+      var phrase = `${item} at $${cart[i][item]}`;
+      
+      cartItems.push(phrase);
+    }
+   
+   var oxfordComma = cartItems.pop();
+   console.log(`${statement}${cartItems.join(', ')}, and ${oxfordComma}.` );
+    
+  }
 }
 
 function total() {

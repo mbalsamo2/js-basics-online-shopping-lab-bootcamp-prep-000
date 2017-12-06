@@ -68,8 +68,12 @@ function total() {
 }
 
 function removeFromCart(item) {
-   
-   if ()
+  
+   if (item.hasOwnProperty(item) === false ) {
+     console.log("That item is not in your cart");
+   } else {
+     
+   }
 }
 
 function placeOrder(cardNumber) {

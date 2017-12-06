@@ -33,11 +33,12 @@ function viewCart() {
     
   } else if (cart.length === 2) {
     var itemOne = Object.keys(cart[0]);
-    var itemOnePrice = Object.keys(cart[0][itemOne]);
+    var itemOnePrice = cart[0][itemOne];
     var itemTwo = Object.keys(cart[1]);
-    var itemTwoPrice = Object.keys(cart[1][itemTwo]);
+    var itemTwoPrice = cart[1][itemTwo];
     
     console.log(`${statement}${itemOne} at $${itemOnePrice} and ${itemTwo} at $${itemTwoPrice}.`);
+    
   } else {
     var cartItems = [];
     

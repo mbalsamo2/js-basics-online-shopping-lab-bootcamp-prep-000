@@ -68,7 +68,8 @@ function total() {
 }
 
 function removeFromCart(item) {
-  
+   
+   if (item)
 }
 
 function placeOrder(cardNumber) {

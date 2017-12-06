@@ -81,7 +81,7 @@ function removeFromCart(item) {
   
    if (!found) {
      console.log("That item is not in your cart");
-     
+     return;
    }
      
    

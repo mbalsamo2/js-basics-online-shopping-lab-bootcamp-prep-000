@@ -68,7 +68,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  
+  var found = false;
    if (cart.hasOwnProperty(item) === true ) {
      delete cart[item];
      

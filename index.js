@@ -70,7 +70,7 @@ function total() {
 function removeFromCart(item) {
   
    if (cart.hasOwnProperty(item) === true ) {
-     
+     delete cart[item];
      
    } else {
      

@@ -55,7 +55,15 @@ function viewCart() {
 }
 
 function total() {
+  var total = 0;
+  var item;
+  var itemPrice;
   
+  for (var i in cart) {
+    item = Object.keys(cart[i]);
+    itemPrice = cart[i][item];
+    total += itme
+  }
 }
 
 function removeFromCart(item) {
